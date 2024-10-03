@@ -48,8 +48,9 @@ export default {
           throw new Error('Erro ao buscar licitações');
         }
         const data = await response.json();
+        console.log(data)
         this.licitacoes = data.content; 
-        this.totalPages = data.totalPages; 
+        this.totalPages = data.page.totalPages; 
       } catch (err) {
         this.error = err.message;
       } finally {
