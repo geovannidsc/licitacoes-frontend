@@ -5,7 +5,7 @@
       type="text"
       v-model="filter"
       @keyup.enter="emitFilter"
-      placeholder="Filtrar por palavras chaves"
+      placeholder="Filtrar por palavras chaves ou data"
     />
     <button @click="emitFilter">Pesquisar</button>
   </div>

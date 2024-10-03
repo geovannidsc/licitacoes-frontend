@@ -43,7 +43,7 @@ export default {
     async fetchLicitacoes() {
       this.loading = true;
       try {
-        const response = await fetch(`http://localhost:8080/api/licitacoes?page=${this.currentPage - 1}&size=20&termo=${this.filter}`);
+        const response = await fetch(`https://licitacoes-production.up.railway.app/api/licitacoes?page=${this.currentPage - 1}&size=20&termo=${this.filter}`);
         if (!response.ok) {
           throw new Error('Erro ao buscar licitações');
         }
