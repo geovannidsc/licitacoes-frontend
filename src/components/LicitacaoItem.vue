@@ -50,7 +50,7 @@ export default {
     this.isChecked = !this.isChecked;
 
     try {
-      const response = await fetch(`http://localhost:8080/api/licitacoes/alternar-leitura?numeroPregao=${this.licitacao.numeroPregao}&codigoUasg=${this.licitacao.codigoUasg}`, {
+      const response = await fetch(`https://licitacoes-production.up.railway.app/api/licitacoes/alternar-leitura?numeroPregao=${this.licitacao.numeroPregao}&codigoUasg=${this.licitacao.codigoUasg}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
